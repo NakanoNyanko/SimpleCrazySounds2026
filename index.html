@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Crazy Sounds</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <h1 class="title">Simple Crazy Sounds</h1>
+
+    <div class="panel">
+      <label>
+        ボタン数：
+        <input id="buttonCount" type="number" min="1" max="26" value="5">
+      </label>
+      <button id="applyButtonCount">適用</button>
+    </div>
+
+    <div id="soundButtons" class="grid"></div>
+
+    <div class="card-row">
+      <label class="volume-label">
+        Speed：
+        <input id="speed" type="range" min="0.5" max="2" step="0.01" value="1">
+      </label>
+    </div>
+
+    <div class="card">
+      <div class="card-row">
+        <label>
+          <input type="checkbox" id="loop" checked>
+          ループ再生
+        </label>
+      </div>
+
+      <div class="card-row">
+        <label>
+          間隔：
+          <input id="interval" type="number" value="0" min="0"> 秒
+        </label>
+      </div>
+
+      <div class="card-row">
+        <label>
+          Timer：
+          <input id="timer" type="number" min="1" placeholder="分">
+        </label>
+        <button id="applyTimer">適用</button>
+      </div>
+
+      <div class="card-row">
+        <label class="volume-label">
+          Volume：
+          <input id="volume" type="range" min="0" max="1" step="0.01" value="1">
+        </label>
+      </div>
+    </div>
+
+    <div>
+      <div id="nowPlaying" class="now-playing" hidden></div>
+      <div id="timerStatus" class="timer-status" hidden></div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
